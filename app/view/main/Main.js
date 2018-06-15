@@ -5,45 +5,73 @@
  *
  * TODO - Replace this content of this view to suite the needs of your application.
  */
-Ext.define('HelloGeoExt.view.main.Main', {
-    extend: 'Ext.panel.Panel',
-    xtype: 'app-main',
+Ext.define('MalawiAtlas.view.main.Main', {
+  extend: 'Ext.panel.Panel',
+  xtype: 'app-main',
 
-    requires: [
-        'Ext.plugin.Viewport',
-        'Ext.window.MessageBox',
+  requires: [
+    'Ext.plugin.Viewport',
+    'Ext.window.MessageBox',
 
-        'HelloGeoExt.view.main.MainController',
-        'HelloGeoExt.view.main.MainModel',
-        'HelloGeoExt.view.main.List'
-    ],
+  ],
 
-    controller: 'main',
-    viewModel: 'main',
-    layout: 'border',
+  layout: 'border',
+
+  defaults: {
+    split: true,
+    bodyPadding: 10
+  },
+
+  header: {
+    height: 50,
+    layout: {
+        align: 'stretchmax'
+    },
+
+    iconCls: 'fa-map-o',
+
     items: [{
-            title: 'South Region is resizable',
-            region: 'south',     // position for region
-            xtype: 'panel',
-            height: 100,
-            split: true,         // enable resizing
-            margin: '0 5 5 5'
-        },{
-            // xtype: 'panel' implied by default
-            title: 'West Region is collapsible',
-            region:'west',
-            xtype: 'panel',
-            margin: '5 0 0 5',
-            width: 200,
-            collapsible: true,   // make collapsible
-            id: 'west-region-container',
-            layout: 'fit'
-        },{
-            title: 'Center Region',
-            region: 'center',     // center region is required, no width/height specified
-            xtype: 'mappanel',
-            layout: 'fit',
-            margin: '5 5 0 0'
-        }],
+      xtype: 'image',
+      src: 'http://zgis186.geo.sbg.ac.at/malawi_atlas/images/gi4drr.jpg',
+      width: 180,
+      height: 40
+    }
+  ]
+},
+
+  items: [
+  
+    // main map
+    {
+      title: 'Center Region',
+      region: 'center',
+      xtype: 'mappanel',
+      layout: 'fit'
+    },
+      // side-bar
+      {
+        xtype: 'panel',
+        region: 'west',
+        layout: {
+          type: 'vbox',
+          align: 'stretch'
+        },
+        items: [{
+          xtype: 'overviewmapcontainer'
+        }, {
+          xtype: 'listcontainer'
+        }, {
+          xtype: 'mytreepanel'
+        }]
+      },
+    // top toolbar
+    {
+      title: 'This is the toolbar',
+      region: 'north',
+      xtype: 'mytoolbar',
+      height: 50
+
+    }
+  ]
 
 });

@@ -1,12 +1,12 @@
 /**
  * This view is an example list of people.
  */
-Ext.define('HelloGeoExt.view.main.List', {
+Ext.define('MalawiAtlas.view.main.List', {
     extend: 'Ext.grid.Panel',
     xtype: 'mainlist',
 
     requires: [
-        'HelloGeoExt.store.Personnel'
+        'MalawiAtlas.store.Personnel'
     ],
 
     title: 'Personnel',

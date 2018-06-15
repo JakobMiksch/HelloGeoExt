@@ -1,30 +1,33 @@
-Ext.define("HelloGeoExt.view.main.Map",{
-    extend: "GeoExt.component.Map",
-    xtype: 'mappanel',
-    requires: [
-        "HelloGeoExt.view.main.MapController",
-        "HelloGeoExt.view.main.MapModel"
+Ext.define("MalawiAtlas.view.main.Map", {
+  extend: "GeoExt.component.Map",
+  xtype: 'mappanel',
+
+  map: new ol.Map({
+    controls: ol.control.defaults({
+      attributionOptions: {
+        collapsible: true,
+        collapsed: false
+      }
+    }),
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM(),
+        name: 'OpenStreetMap'
+      }),
+      new ol.layer.Tile({
+        source: new ol.source.TileWMS({
+          url: 'http://ows.terrestris.de/osm/service',
+          params: {
+            layers: 'OSM-WMS'
+          }
+        }),
+        name: 'OSM WMS (terrestris)'
+      })
     ],
-    controller: "main-map",
-    viewModel: {
-        type: "main-map"
-    },
-    map: new ol.Map({
-        layers: [
-            new ol.layer.Tile({
-                source: new ol.source.Stamen({
-                    layer: 'watercolor'
-                })
-            }),
-            new ol.layer.Tile({
-                source: new ol.source.Stamen({
-                    layer: 'terrain-labels'
-                })
-            })
-        ],
-        view: new ol.View({
-            center: ol.proj.fromLonLat( [-8.751278, 40.611368] ),
-            zoom: 12
-        })
+    view: new ol.View({
+      center: ol.proj.fromLonLat([34.3015278, -13.2512161]),
+      zoom: 7
     })
+  })
+
 });

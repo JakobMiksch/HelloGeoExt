@@ -15,19 +15,19 @@ This folder contains misc. support code for Sass builds (global functions, etc.)
 
 This folder contains Sass files defining CSS rules corresponding to classes
 included in the application's JavaScript code build. By default, files in this 
-folder are mapped to the application's root namespace, 'HelloGeoExt'. This is set in
+folder are mapped to the application's root namespace, 'MalawiAtlas'. This is set in
 `"app.json"`:
 
     "sass": {
-        "namespace": "HelloGeoExt"
+        "namespace": "MalawiAtlas"
     }
 
 ### ./sass/var
 
 This folder contains Sass files defining Sass variables corresponding to classes
 included in the application's JavaScript code build. By default, files in this 
-folder are mapped to the application's root namespace, 'HelloGeoExt' in the same way
-as `"HelloGeoExt/sass/src"`.
+folder are mapped to the application's root namespace, 'MalawiAtlas' in the same way
+as `"MalawiAtlas/sass/src"`.
 
 ## Slicing
 

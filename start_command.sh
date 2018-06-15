@@ -3,4 +3,4 @@
 sencha \
     -sdk /PATH/TO/EXT/ext-6.2.0 \
     generate app -ext -classic \
-    HelloGeoExt .
+    MalawiAtlas .

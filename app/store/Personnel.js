@@ -1,4 +1,4 @@
-Ext.define('HelloGeoExt.store.Personnel', {
+Ext.define('MalawiAtlas.store.Personnel', {
     extend: 'Ext.data.Store',
 
     alias: 'store.personnel',

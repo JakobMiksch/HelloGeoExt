@@ -3,10 +3,10 @@
  * calls Ext.application(). This is the ideal place to handle application launch and
  * initialization details.
  */
-Ext.define('HelloGeoExt.Application', {
+Ext.define('MalawiAtlas.Application', {
     extend: 'Ext.app.Application',
 
-    name: 'HelloGeoExt',
+    name: 'MalawiAtlas',
 
     quickTips: false,
     platformConfig: {

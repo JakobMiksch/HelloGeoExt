@@ -1,6 +1,6 @@
 {
-  "name": "HelloGeoExt",
-  "namespace": "HelloGeoExt",
+  "name": "MalawiAtlas",
+  "namespace": "MalawiAtlas",
   "version": "1.0.0.0",
   "framework": "ext",
   "toolkit": "classic",
@@ -66,13 +66,13 @@
   "sass": {
     /**
      * The root namespace to use when mapping *.scss files to classes in the
-     * sass/src and sass/var directories. For example, "HelloGeoExt.view.Foo" would
-     * map to "sass/src/view/Foo.scss". If we changed this to "HelloGeoExt.view" then
+     * sass/src and sass/var directories. For example, "MalawiAtlas.view.Foo" would
+     * map to "sass/src/view/Foo.scss". If we changed this to "MalawiAtlas.view" then
      * it would map to "sass/src/Foo.scss". To style classes outside the app's
      * root namespace, change this to "". Doing so would change the mapping of
-     * "HelloGeoExt.view.Foo" to "sass/src/HelloGeoExt/view/Foo.scss".
+     * "MalawiAtlas.view.Foo" to "sass/src/MalawiAtlas/view/Foo.scss".
      */
-    "namespace": "HelloGeoExt",
+    "namespace": "MalawiAtlas",
 
     /**
      * Generated sass source settings
@@ -205,7 +205,7 @@
    *
    */
   "js": [{
-      "path": "${framework.dir}/build/ext-all-rtl-debug.js"
+      "path": "${framework.dir}/build/ext-all-debug.js"
     }, {
       "path": "https://openlayers.org/en/v4.3.2/build/ol.js",
       "remote": true
