@@ -22,7 +22,10 @@ Ext.define('MalawiAtlas.view.main.OverviewMap', {
     me.setParentMap(olMap);
 
     me.callParent();
-
   }
-
+  
 });
+
+
+
+

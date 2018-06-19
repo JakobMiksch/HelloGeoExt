@@ -2,6 +2,16 @@ Ext.define("MalawiAtlas.view.main.Map", {
   extend: "GeoExt.component.Map",
   xtype: 'mappanel',
 
+  requires: [
+    'MalawiAtlas.view.main.MapController',
+    'MalawiAtlas.view.main.MapModel'
+  ],
+
+  controller: 'main-map',
+  viewModel: {
+    type: 'main-map'
+  },
+
   map: new ol.Map({
     controls: ol.control.defaults({
       attributionOptions: {
